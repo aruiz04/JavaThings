@@ -79,6 +79,16 @@ public class Employee {
     private ArrayList<Position> positions;
 
     public  Employee(){
-        positions = new ArrayList<Position>();
+        positions = new ArrayList<>();
+    }
+    public Employee(String firstName, String lastName, String middleName, SecurityLevel securityLevel, Date dateOfHire, boolean isActive, String memo) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.middleName = middleName;
+        this.securityLevel = securityLevel;
+        this.dateOfHire = dateOfHire;
+        this.isActive = isActive;
+        this.memo = memo;
+        positions = new ArrayList<>();
     }
 }

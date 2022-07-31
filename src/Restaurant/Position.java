@@ -1,6 +1,6 @@
 package Restaurant;
 
-public class   Position {
+public class Position {
     private int positionId;
     private String description;
     private double rate;
@@ -33,5 +33,10 @@ public class   Position {
         this.positionId = positionId;
         this.description = description;
         this.rate = rate;
+    }
+    @Override
+    public String toString() {
+        String result = String.format("Position Id: %s Description: %s\nRate: %s", getPositionId(), getDescription(), getRate());
+        return result;
     }
 }

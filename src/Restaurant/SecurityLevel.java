@@ -24,4 +24,9 @@ public class SecurityLevel {
         this.levelId = levelId;
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Level Id: %s, Description %s", getLevelId(), getDescription());
+    }
 }
