@@ -11,6 +11,7 @@ public class DAL {
         levels.add(new SecurityLevel(1002, "Manager"));
         levels.add(new SecurityLevel(1003, "Reports Only"));
         levels.add(new SecurityLevel(1004, "Staff Manager"));
+        levels.add(new SecurityLevel(1005,"Staff Member"));
         return levels;
     }
 
