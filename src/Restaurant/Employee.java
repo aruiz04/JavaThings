@@ -7,8 +7,11 @@ public class Employee {
     private String firstName;
     private String lastName;
     private String middleName;
-    private  SecurityLevel securityLevel;
+    private SecurityLevel securityLevel;
     private Date dateOfHire;
+    private boolean isActive;
+    private String memo;
+    private ArrayList<Position> positions;
 
     public String getFirstName() {
         return firstName;
@@ -71,16 +74,14 @@ public class Employee {
     }
 
     public void setPositions(ArrayList<Position> positions) {
+        if (positions == null)
+            positions = new ArrayList<>();
         this.positions = positions;
     }
-
-    private boolean  isActive;
-    private String  memo;
-    private ArrayList<Position> positions;
-
-    public  Employee(){
+    public Employee() {
         positions = new ArrayList<>();
     }
+
     public Employee(String firstName, String lastName, String middleName, SecurityLevel securityLevel, Date dateOfHire, boolean isActive, String memo) {
         this.firstName = firstName;
         this.lastName = lastName;
