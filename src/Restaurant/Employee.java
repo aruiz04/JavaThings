@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Employee {
+    private int employeeId;
     private String firstName;
     private String lastName;
     private String middleName;
@@ -12,7 +13,10 @@ public class Employee {
     private boolean isActive;
     private String memo;
     private ArrayList<Position> positions;
-
+    public int getEmployeeId(){return employeeId;}
+    public  void setEmployeeId(int value){
+        employeeId = value   ;
+    }
     public String getFirstName() {
         return firstName;
     }
@@ -82,7 +86,8 @@ public class Employee {
         positions = new ArrayList<>();
     }
 
-    public Employee(String firstName, String lastName, String middleName, SecurityLevel securityLevel, Date dateOfHire, boolean isActive, String memo) {
+    public Employee(int employeeId, String firstName, String lastName, String middleName, SecurityLevel securityLevel, Date dateOfHire, boolean isActive, String memo) {
+        this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
@@ -91,5 +96,10 @@ public class Employee {
         this.isActive = isActive;
         this.memo = memo;
         positions = new ArrayList<>();
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s %s, %s %s", getEmployeeId(), getFirstName(), getLastName(), getSecurityLevel(), getDateOfHire());
     }
 }
