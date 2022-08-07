@@ -1,0 +1,12 @@
+package HW15;
+
+public enum Position {
+    CARDIOLOGIST,
+    GENERAL_MEDICINE,
+    GYNECOLOGIST,
+    ORTHOPEDIST,
+    PEDIATRICIAN,
+    UNCOLOGIST,
+    UROLOGIST
+
+}
