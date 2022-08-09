@@ -4,18 +4,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
 
 public class App {
     public static void main(String[] args) {
-        System.Logger l = System.getLogger("myLogger");
 
         //Creating a new Address object for the Farm address;
-        l.log(System.Logger.Level.INFO,"Creating a new Address object for the Farm address;");
         Address address =  new Address("1522 Petaluma Blvd N", "Petaluma", "94952", "CA");
 
         //Creating and generating cattle map object with inventory count
-        l.log(System.Logger.Level.INFO ,"Creating and generating cattle map object with inventory count");
         Map<Cattle, Integer> cattle = new HashMap<>();
         cattle.put(Cattle.COWS,16);
         cattle.put(Cattle.CHICKEN, 12);
